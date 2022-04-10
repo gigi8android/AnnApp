@@ -1,4 +1,3 @@
-
 import pandas as pd
 import plotly.express as px
 import numpy as np
@@ -637,3 +636,4 @@ counts_df
 # 992	United States	471.0	POINT (-81.65565100000001 30.3321838)	30.332184	-81.655651
 # 993	United States	471.0	POINT (-122.8473388 38.5110803)	38.511080	-122.847339
 # 994	Russia	100.0	POINT (37.6174943 55.7504461)	55.750446	37.617494
+
