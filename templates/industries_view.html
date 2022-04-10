@@ -34,6 +34,7 @@
             <script type="text/javascript">
             var svg2 = dimple.newSvg("#chartContainer", 690, 420);
             d3.tsv("all_billionaires.tsv", function (data) {
+                console.log(data)
                 var myChart = new dimple.chart(svg2, data);
                 myChart.setBounds(155, 30, 550, 330)
                 x = myChart.addMeasureAxis("x", "net");
@@ -47,10 +48,11 @@
                 myChart.draw();
             });
             </script>
-            <script src="{{url_for('static', filename='all_billionaires.tsv')}}"></script>
 
 
         </div>
     </div>
+    <script src="{{url_for('static', filename='all_billionaires.tsv')}}"></script>
+
 </body>
 </html>
