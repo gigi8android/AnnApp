@@ -1,5 +1,5 @@
 import os
-API_KEYS = os.getenv("API_KEY", "optional-default")
+API_KEYS = os.getenv("API_KEY")
 
 import pandas as pd
 import plotly.express as px
