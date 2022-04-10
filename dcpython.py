@@ -1,5 +1,5 @@
 import os
-api_key = os.getenv("API_KEY", "optional-default")
+API_KEY = os.getenv("API_KEY", "optional-default")
 
 import pandas as pd
 import plotly.express as px
@@ -301,7 +301,7 @@ output_filename = 'dataset.js'
 with open("./output/bgeojsondc.geojson", 'w') as output_file:
     output_file.write('var dataset = ')
     json.dump(geojson, output_file, indent=2) 
-API_KEY="API_KEY"
+API_KEY=API_KEY
 # density map by net worth
 fig = px.density_mapbox(billionaires2_geo_dc1, lat='latitude', lon='longitude', z='NetWorth', radius=10,
                         center=dict(lat=0, lon=180), zoom=0,
