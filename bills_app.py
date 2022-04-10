@@ -27,7 +27,7 @@ CORS(app)
 # Use PyMongo to establish Mongo connection for database mars_app
 #################################################
 # mongo = PyMongo(app, uri="mongodb://localhost:27017/billionaires_app")
-
+MONGODB_URI = 'mongodb+srv://gigi7android:1qazxcvbnM@cluster0.vceyj.mongodb.net/billionaires_app'
 mongo = PyMongo(app, uri=MONGODB_URI)
 #################################################
 # Route to render index.html template using data from MongoDB

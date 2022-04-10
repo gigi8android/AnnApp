@@ -91,8 +91,10 @@
         /* Use D3 (not dimple.js) to load the TSV file
           and pass the contents of it to the draw function
         */
-        d3.tsv("js/number_of_billionaires_1.js", draw);
+        d3.tsv("number_of_billionaires_1.js", draw);
       </script>
     </div>
+    <script src="{{url_for('static', filename='number_of_billionaires_1.js')}}"></script>
+
   </body>
 </html>
