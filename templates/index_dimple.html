@@ -38,7 +38,6 @@
     </style>
     <script type="text/javascript">
       function draw(data) {
-        console.log(data)
       // D3.js setup code 
         "use strict";
         var margin = 10,
@@ -92,12 +91,8 @@
         /* Use D3 (not dimple.js) to load the TSV file
           and pass the contents of it to the draw function
         */
-        d3.tsv("number_of_billionaires_1.tsv", draw);
+        d3.tsv("js/number_of_billionaires_1.js", draw);
       </script>
     </div>
-    <script src="{{url_for('static', filename='number_of_billionaires_1.tsv')}}"></script>
-    <script src="http://d3js.org/d3.v4.min.js"></script>
-    <script src="http://dimplejs.org/dist/dimple.v2.3.0.min.js"></script>
-
   </body>
 </html>
