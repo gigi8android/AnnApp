@@ -30,15 +30,17 @@
     <meta charset="utf-8">
     <style type="text/css">
     	circle.dimple-series-1 {
-    		fill: white;
         background: white;
     	}
+      body{
+        background: white ;
+      }
     </style>
     <script type="text/javascript">
       function draw(data) {
       // D3.js setup code 
         "use strict";
-        var margin = 50,
+        var margin = 10,
             width = 1500 - margin,
             height = 500 - margin; 
 
@@ -49,28 +51,28 @@
           .append('g')
               .attr('class','chart');
 
-            svg.append("text")
-          .attr("x", 600)             
-          .attr("y", 30)
-          .attr("text-anchor", "center")  
-          .style("font-family", "Helvetica")
-          .style("font-size", "16px")   
-          .text("Number of Billionaires per Country, 2021");
+          //    svg.append("text")
+          //  .attr("x", 600)             
+          //  .attr("y", 30)
+          //  .attr("text-anchor", "center")  
+          //  .style("font-family", "Helvetica")
+          //  .style("font-size", "auto")   
+          //  .text("Number of Billionaires per Country, 2021");
 
-          svg.append("rect")
-          .attr("x", width * 0.1)
-          .attr("y", height * 0.1)
-          .attr("width", width * 1.2)
-          .attr("height", height * 1.2)
-          .style("fill", "white");
+          //  svg.append("rect")
+          //  .attr("x", width * 0.1)
+          //  .attr("y", height * 0.1)
+          //  .attr("width", width * 2)
+          //  .attr("height", height * 2.1)
+          //  .style("fill", "white");
 
       // Dimple.js Chart construction code
         var myChart = new dimple.chart(svg, data);
         var x = myChart.addCategoryAxis("x", "Country");
         var y = myChart.addMeasureAxis("y", "Number of Billionaires");
         x.title = "Country";
-        y.title = "Total";
-        x.fontSize = "8";
+        y.title = "Number of Billionaires";
+        x.fontSize = "11";
         y.fontSize = "auto";
         x.dateParseFormat = "%Y";
         x.showGridlines = true;
@@ -80,16 +82,17 @@
       };
     </script>
   </head>
+  <h2 style="text-align:left; color:black; font:bold;padding-left: 400px;"><b>Number of Billionaires per Country, 2021</b></h2>
   <body>
     <div id="chartContainer" style="background: white;">
-    <script src="https://d3js.org/d3.v3.min.js"></script>
-    <script src="http://dimplejs.org/dist/dimple.v2.0.0.min.js"></script>
-     <script type="text/javascript">
-      /* Use D3 (not dimple.js) to load the TSV file
-        and pass the contents of it to the draw function
-      */
-      d3.tsv("js/number_of_billionaires_1.js", draw);
-    </script>
-  </div>
+      <script src="https://d3js.org/d3.v3.min.js"></script>
+      <script src="http://dimplejs.org/dist/dimple.v2.0.0.min.js"></script>
+      <script type="text/javascript">
+        /* Use D3 (not dimple.js) to load the TSV file
+          and pass the contents of it to the draw function
+        */
+        d3.tsv("js/number_of_billionaires_1.js", draw);
+      </script>
+    </div>
   </body>
 </html>
