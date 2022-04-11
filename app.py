@@ -31,7 +31,7 @@ CORS(app)
 
 # mongo = PyMongo(app, uri="mongodb://localhost:27017/billionaires_app")
 
-mongo = PyMongo(app, uri=MONGODB_URI)
+mongo = PyMongo(app, uri="MONGODB_URI")
 #################################################
 # Route to render index.html template using data from MongoDB
 #################################################
