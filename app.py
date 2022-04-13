@@ -8,7 +8,7 @@ from flask_cors import CORS
 from pymongo import MongoClient
 import datetime as dt
 import os
-MONGODB_URI = os.environ.get("MONGODB_URI")
+MONGODB_URI = os.environ.get("MONGODB_URI","")
 
 #################################################
 # Import file scrap_billsthat contains all scrapping functions
