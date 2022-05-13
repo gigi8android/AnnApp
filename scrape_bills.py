@@ -144,7 +144,7 @@ def losers(browser):
 def all_bills():
 
     # Read json data via json url
-    json_url = "https://forbes400.herokuapp.com/api/forbes400?limit=3000"
+    json_url = "https://forbes400.herokuapp.com/api/forbes400?limit=30"
     json_read = pd.read_json(json_url, convert_dates=True)
 
     # Add try/except for error handling
